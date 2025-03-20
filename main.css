@@ -9,6 +9,10 @@
     body{
     background-color: #024059;
     font-family: 'Bild', sans-serif;
+    background-image: url("images/bild-pattern.svg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position:0 200px;
 }
 
 /* <!-- bild bild svg background hero section styling --> */
@@ -88,12 +92,25 @@ h3{
     position: absolute;
     
 }
+@keyframes weightChange {
+    0%, 100%{
+        font-variation-settings:  "wght" 800, "wdth" 100, "XHGT" 0;
+    }
+    50%{font-variation-settings:  "wght" 800, "wdth" 100, "XHGT" 90;
+    }
+    
+}
 h4{
     color: white;
     font-variation-settings: "wght" 300, "wdth" 100, "XHGT" 0;
     text-align: center;
     font-size: 2em;
     padding-top: 20px;
+}
+h5{
+    color: white;
+    font-size: 4em;
+    margin:  15px;
 }
 
 
@@ -106,14 +123,38 @@ footer {
 }
 
 
-@keyframes weightChange {
-    0%, 100%{
-        font-variation-settings:  "wght" 800, "wdth" 100, "XHGT" 0;
-    }
-    50%{font-variation-settings:  "wght" 800, "wdth" 100, "XHGT" 100;
-    }
-    
+/* animations for the variations section */
+.weight{
+    animation: weightVariations 7s infinite;
 }
+@keyframes weightVariations {
+    0%, 100%{
+        font-variation-settings:  "wght" 900, "wdth" 100, "XHGT" 0;
+    }
+    50%{font-variation-settings:  "wght" 100, "wdth" 100, "XHGT" 0;
+    }
+}
+.width{
+    animation: widthVariations 7s infinite;
+}
+@keyframes widthVariations {
+    0%, 100%{
+        font-variation-settings:  "wght" 400, "wdth" 100, "XHGT" 0;
+    }
+    50%{font-variation-settings:  "wght" 400, "wdth" 0, "XHGT" 0;
+    }
+}
+.x-height{
+    animation: xVariations 7s infinite;
+}
+@keyframes xVariations {
+    0%, 100%{
+        font-variation-settings:  "wght" 400, "wdth" 100, "XHGT" 100;
+    }
+    50%{font-variation-settings:  "wght" 400, "wdth" 100, "XHGT" 0;
+    }
+}
+
 
 /* variable font that changes on hover */
 .variable-font{
